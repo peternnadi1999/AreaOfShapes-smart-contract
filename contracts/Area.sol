@@ -2,28 +2,18 @@
 pragma solidity ^0.8.24;
 
 contract Area{
-    uint public  base;
-    uint public  height;
-    uint public  length;
-    uint public  width;
-    uint public  numberOfSides;
 
-
-    function AreaOfATriangle(uint _base, uint _height) public  returns(uint AreaOf){
-            base= _base;
-            height= _height;
-            AreaOf =  (base * height)/2;
+    function AreaOfATriangle(uint _base, uint _height) public  pure returns(uint AreaOf){
+            AreaOf =  (_base * _height)/2;
             return AreaOf;
     }
-    function AreaOfARectangle(uint _length, uint _width) public   returns(uint){
-            length= _length;
-            width= _width;
-           uint AreaOf = length * width;
+    function AreaOfARectangle(uint _length, uint _width) public pure   returns(uint){
+            
+           uint AreaOf = _length * _width;
             return AreaOf;
     }
-    function AreaOfASquare(uint _numberOfSides) public   returns(uint AreaOf){
-            numberOfSides= _numberOfSides;
-            AreaOf = numberOfSides ** 2;
+    function AreaOfASquare(uint _numberOfSides) public pure   returns(uint AreaOf){
+            AreaOf = _numberOfSides ** 2;
             return AreaOf;
     }
   
